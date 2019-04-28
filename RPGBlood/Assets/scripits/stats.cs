@@ -6,7 +6,6 @@ public class stats : MonoBehaviour
 {
     public string Name;
     public int level,curentHP, MaxHP,Deff,Att;
-    public float currentMagic, MaxMajic;
-
+ 
    
 }

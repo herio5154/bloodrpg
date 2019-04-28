@@ -6,15 +6,10 @@ public class monBace : stats
 {
 
     public Rigidbody2D monBody;
-    void Start()
+    public virtual void dead()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StopAllCoroutines();
+        Destroy(gameObject);
     }
     public virtual  void OnCollisionEnter2D(Collision2D coll)
     {
