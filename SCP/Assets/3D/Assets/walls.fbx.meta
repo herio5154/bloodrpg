@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 1e355e8717ee46045a62135c3c419120
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: corner_wall
+    100002: door_button
+    100004: door_frame1
+    100006: light
+    100008: officeWall_flat
+    100010: Rooler_door
+    100012: //RootNode
+    100014: office_Door
+    100016: office_door_frame2
+    100018: office_door_part
+    100020: office_winow
+    100022: polySurface1
+    400000: corner_wall
+    400002: door_button
+    400004: door_frame1
+    400006: light
+    400008: officeWall_flat
+    400010: Rooler_door
+    400012: //RootNode
+    400014: office_Door
+    400016: office_door_frame2
+    400018: office_door_part
+    400020: office_winow
+    400022: polySurface1
+    2100000: steall
+    2100002: roller_door
+    2100004: wall
+    2100006: lambert6
+    2100008: lambert7
+    2100010: wall_treads
+    2100012: lambert10
+    2300000: corner_wall
+    2300002: door_button
+    2300004: door_frame1
+    2300006: light
+    2300008: officeWall_flat
+    2300010: Rooler_door
+    2300012: office_Door
+    2300014: office_door_frame2
+    2300016: office_door_part
+    2300018: office_winow
+    2300020: polySurface1
+    3300000: corner_wall
+    3300002: door_button
+    3300004: door_frame1
+    3300006: light
+    3300008: officeWall_flat
+    3300010: Rooler_door
+    3300012: office_Door
+    3300014: office_door_frame2
+    3300016: office_door_part
+    3300018: office_winow
+    3300020: polySurface1
+    4300000: door_frame1
+    4300002: Rooler_door
+    4300004: corner_wall
+    4300006: officeWall_flat
+    4300008: door_button
+    4300010: light
+    4300012: polySurface1
+    4300014: office_door_part
+    4300016: office_door_frame2
+    4300018: office_winow
+    4300020: office_Door
+    6400000: corner_wall
+    6400002: door_button
+    6400004: door_frame1
+    6400006: light
+    6400008: officeWall_flat
+    6400010: Rooler_door
+    6400012: office_Door
+    6400014: office_door_frame2
+    6400016: office_door_part
+    6400018: office_winow
+    6400020: polySurface1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 1
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

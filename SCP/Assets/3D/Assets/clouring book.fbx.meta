@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 820b4772efe4c4b4b923eea8c16bfcde
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: clouring_book
+    100004: penci
+    100006: pencil
+    100008: pencil1
+    100010: pencil2
+    100012: pencil3
+    100014: pencil4
+    100016: pencil5
+    100018: pencil6
+    100020: pencil7
+    100022: pencil8
+    100024: pencil9
+    100026: pencil_holder
+    400000: //RootNode
+    400002: clouring_book
+    400004: penci
+    400006: pencil
+    400008: pencil1
+    400010: pencil2
+    400012: pencil3
+    400014: pencil4
+    400016: pencil5
+    400018: pencil6
+    400020: pencil7
+    400022: pencil8
+    400024: pencil9
+    400026: pencil_holder
+    2100000: pencils
+    2300000: clouring_book
+    2300002: pencil
+    2300004: pencil1
+    2300006: pencil2
+    2300008: pencil3
+    2300010: pencil4
+    2300012: pencil5
+    2300014: pencil6
+    2300016: pencil7
+    2300018: pencil8
+    2300020: pencil9
+    2300022: pencil_holder
+    3300000: clouring_book
+    3300002: pencil
+    3300004: pencil1
+    3300006: pencil2
+    3300008: pencil3
+    3300010: pencil4
+    3300012: pencil5
+    3300014: pencil6
+    3300016: pencil7
+    3300018: pencil8
+    3300020: pencil9
+    3300022: pencil_holder
+    4300000: pencil1
+    4300002: pencil
+    4300004: pencil2
+    4300006: pencil3
+    4300008: pencil4
+    4300010: pencil5
+    4300012: pencil6
+    4300014: pencil7
+    4300016: pencil8
+    4300018: pencil9
+    4300020: pencil_holder
+    4300022: clouring_book
+    6400000: clouring_book
+    6400002: pencil
+    6400004: pencil1
+    6400006: pencil2
+    6400008: pencil3
+    6400010: pencil4
+    6400012: pencil5
+    6400014: pencil6
+    6400016: pencil7
+    6400018: pencil8
+    6400020: pencil9
+    6400022: pencil_holder
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
