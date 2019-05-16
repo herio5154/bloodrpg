@@ -12,52 +12,101 @@ public class PlayerLook : MonoBehaviour
     private float xAxisClamp;
     public  Camera PlayerCam;
     public LayerMask intractableLayer;
-    public Transform hands;
-    private bool ISholding;
-    public INtractable InHands;
-    public float throwForce = 5f;
-     // Start is called before the first frame update
+    public Transform playerHands;
+    public bool ISholding;
+    private IIntractable holding;
+    [Space]
+    [Header("zoom")]
+    public float camZoom = 60;
+    public float camDis, minZooom;
+    public float changeAmount;
+    private bool Iszoom;
+    private bool waitAsecond;
+      // Start is called before the first frame update
     void Start()
     {
         PlayerCam = gameObject.GetComponent<Camera>();
     }
 
     // Update is called once per frame
+
     void Update()
     {
-       
-        if(ISholding == true)
-        {
-            if (Input.GetButtonDown("Fire2"))
-            {
-            InHands.Drop(throwForce);
-                ISholding = false;
-           }
-          
-        }
-        if (ISholding == false)
-        {
- 
-            if (Input.GetButtonDown("Fire1")) Act();
 
+        if(GameM.playerMoving == true)
+        {
+            if (Input.GetButtonDown("Fire1") && waitAsecond == false) Act();
+            if (Input.GetButtonDown("Fire2") && waitAsecond == false && ISholding == false) use();
+            if (Input.GetKey(KeyCode.Z))
+            {
+                Iszoom = false;
+                if (camZoom > minZooom) camZoom -= changeAmount;
+                PlayerCam.fieldOfView = camZoom;
+            }
+            if (Input.GetKeyUp(KeyCode.Z))
+            {
+                StartCoroutine(Zoomout());
+            }
+            CameraRotation();
         }
-     if(GameM.playerMoving == true)CameraRotation();
-   
-    
+           
     }
-    private void Act()
+  private void use()
     {
+        waitAsecond = true;
+        StartCoroutine(wait());
         RaycastHit Hit;
         if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, intractableLayer))
         {
-            Debug.Log("hit" + Hit.transform.tag);
-            if (Hit.transform.tag == "Intractable")
-            {
-                Debug.Log("hit");
-                Hit.transform.GetComponent<INtractable>().PickUp(hands);
-                InHands = Hit.transform.GetComponent<INtractable>();
-                ISholding = true;
-            }
+               if (Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable") Hit.transform.GetComponent<IIntractable>().Use();
+
+
+        }
+    }
+   
+
+       private void Act()
+    {
+       waitAsecond = true;
+        StartCoroutine(wait());
+        RaycastHit Hit;
+        if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, intractableLayer))
+        {
+                 if (ISholding == false)
+                {
+                    if (Hit.transform.tag == "Intractable")
+                   {
+
+                    holding = Hit.transform.GetComponent<IIntractable>();
+                    holding.Use();
+                    }
+                    if (Hit.transform.tag == "Object")
+                    {
+                    holding = Hit.transform.GetComponent<IIntractable>();
+                    holding.PickUp(playerHands);
+                    ISholding = true;
+                    }
+                    return;
+                }
+                if (ISholding == true)
+                {
+                    if (holding != null &&(Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable"))
+                    {
+                    holding.Drop();
+                    holding = null;
+                    ISholding = false;
+                    }
+                    return;
+                }
+          
+
+
+            
+           
+            if (Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable")  Hit.transform.GetComponent<IIntractable>().Use();
+
+            
+
         }
     }
      
@@ -91,4 +140,22 @@ public class PlayerLook : MonoBehaviour
         eulerRotation.x = value;
         transform.eulerAngles = eulerRotation;
     }
+    IEnumerator Zoomout()
+    {
+        Iszoom = true;
+        while (camZoom < camDis&&Iszoom == true)
+        {
+            camZoom += 1;
+            PlayerCam.fieldOfView = camZoom;
+            yield return new WaitForSeconds(0.01f);
+        }
+ 
+    }
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.5f);
+        waitAsecond = false;
+
+    }
+
 }

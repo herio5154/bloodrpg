@@ -5,4 +5,6 @@ using UnityEngine;
 public class GameM : MonoBehaviour
 {
     public static bool playerMoving = true;
+
+
 }

@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public interface INtractable
+ 
+public interface IIntractable
 {
-    void PickUp(Transform Pos);
-    void Drop(float power);
+    void PickUp(Transform destnation);
+    void Drop();
+    void Use();
 }

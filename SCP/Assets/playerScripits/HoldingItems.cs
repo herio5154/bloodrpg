@@ -3,41 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class HoldingItems : MonoBehaviour, INtractable
+public class HoldingItems : MonoBehaviour,IIntractable
 {
-    public Rigidbody rigidBody;
-    private Vector3 lastPos = Vector3.zero, poseDela = Vector3.zero;
-    private bool Holding;
- 
+    bool isHolding;
+
     void Update()
     {
-       if(Holding == true)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Debug.Log("hay");
-            }
-        }
-      
+  
+    }
+    public void  Use()
+    {
 
     }
-
-
-    public void PickUp(Transform Pos)
+    public void PickUp(Transform PlayerHands)
     {
-        Holding = true;
-        transform.position = Pos.position;
-        transform.parent = Pos;
-        rigidBody.useGravity = false;
-     }
-    public void Drop(float power)
-    {
-        Holding = false;
-        transform.parent = null;
-        rigidBody.useGravity = true;
-        rigidBody.AddForce(Camera.main.transform.forward *power);
-        GameM.playerMoving = true;
-   
+        GetComponent<Rigidbody>().useGravity = false;
+        this.transform.position = PlayerHands.position;
+        this.transform.parent = PlayerHands;
     }
-   
+    public void Drop()
+    {
+        GetComponent<Rigidbody>().useGravity = true;
+        this.transform.parent = null;
+    }
 }
