@@ -103,7 +103,7 @@ public class PlayerLook : MonoBehaviour
 
             
            
-            if (Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable")  Hit.transform.GetComponent<IIntractable>().Use();
+          ///  if (Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable")  Hit.transform.GetComponent<IIntractable>().Use();
 
             
 

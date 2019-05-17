@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArciveBox : MonoBehaviour,IIntractable
 {
     public GameObject Stuff,ArciveBoxObj;
-    
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +15,10 @@ public class ArciveBox : MonoBehaviour,IIntractable
 
     public  void Use()
     {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         Debug.Log("Im off");
         ArciveBoxObj.transform.parent = null;
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
     public  void PickUp(Transform PlayerHands)
     {
