@@ -61,12 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameM.cs" />
+    <Compile Include="Assets\officeDoorM.cs" />
     <Compile Include="Assets\playerScripits\ArciveBox.cs" />
     <Compile Include="Assets\playerScripits\DragObjet.cs" />
     <Compile Include="Assets\playerScripits\HoldingItems.cs" />
     <Compile Include="Assets\playerScripits\Interface.cs" />
     <Compile Include="Assets\playerScripits\PlayerLook.cs" />
     <Compile Include="Assets\playerScripits\PlayerMove.cs" />
+    <Compile Include="Assets\TapeButtons.cs" />
+    <Compile Include="Assets\tapeLoadeer.cs" />
+    <Compile Include="Assets\tapeM.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

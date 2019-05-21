@@ -7,22 +7,32 @@ using UnityEngine;
 public class HoldingItems : MonoBehaviour,IIntractable
 {
     bool isHolding;
+    private Rigidbody rigidBody;
     private Transform hands;
+    void Start()
+    {
+        rigidBody = GetComponent<Rigidbody>();
+    }
     void Update()
     {
-      //if(isHolding == true && GameM.playerMoving == true && Input.GetButtonDown("Fire2")) GameM.playerMoving = false;
+       if(isHolding == true && GameM.playerMoving == true && Input.GetButtonDown("Fire2")) GameM.playerMoving = false;
+        if (isHolding == true && GameM.playerMoving == false && Input.GetButtonUp("Fire2")) GameM.playerMoving = true;
+        if(isHolding == true && GameM.playerMoving == true)
+        {
+            this.transform.position = hands.position;
+            rigidBody.velocity = Vector3.zero;
 
-  ///      if (isHolding == true && GameM.playerMoving == true && Input.GetButtonUp("Fire2")) GameM.playerMoving = false;
- 
+        }
     }
     public void  Use()
     {
-
+ 
     }
     public void PickUp(Transform PlayerHands)
     {
         hands = PlayerHands;
-         GetComponent<Rigidbody>().useGravity = false;
+         rigidBody.useGravity = false;
+         rigidBody.velocity = Vector3.zero;
          this.transform.position = PlayerHands.position;
         this.transform.parent = PlayerHands;
         isHolding = true;

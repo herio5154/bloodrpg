@@ -7,9 +7,11 @@ ModelImporter:
     400000: //RootNode
     2100000: desk_wood
     2100002: steal_frame_texture
+    2100004: lambert1
     2300000: //RootNode
     3300000: //RootNode
     4300000: desk
+    4300002: pCube1
     6400000: //RootNode
   externalObjects: {}
   materials:

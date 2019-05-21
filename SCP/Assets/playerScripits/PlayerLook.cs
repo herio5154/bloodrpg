@@ -11,17 +11,17 @@ public class PlayerLook : MonoBehaviour
     public float range = 100f;
     private float xAxisClamp;
     public  Camera PlayerCam;
-    public LayerMask intractableLayer;
     public Transform playerHands;
     public bool ISholding;
     private IIntractable holding;
+    public LayerMask layerMask;
     [Space]
     [Header("zoom")]
     public float camZoom = 60;
     public float camDis, minZooom;
     public float changeAmount;
     private bool Iszoom;
-    private bool waitAsecond;
+     public static bool lockCamra;
       // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +35,57 @@ public class PlayerLook : MonoBehaviour
 
         if(GameM.playerMoving == true)
         {
-            if (Input.GetButtonDown("Fire1") && waitAsecond == false) Act();
-            if (Input.GetButtonDown("Fire2") && waitAsecond == false && ISholding == false) use();
+            if (Input.GetButtonUp("Fire2") && ISholding == false)
+            {
+                RaycastHit Hit;
+                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range,layerMask))
+                {
+
+                    if (Hit.transform.tag == "Intractable")
+                    {
+                        Hit.transform.GetComponent<IIntractable>().Use();
+                    }
+
+                }
+            }
+
+                if (Input.GetButtonDown("Fire1")&&ISholding ==false)
+            {
+             
+           
+                RaycastHit Hit;
+                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range,layerMask))
+                {
+
+                    if (Hit.transform.tag == "Intractable")
+                    {
+                         Hit.transform.GetComponent<IIntractable>().PickUp(playerHands);
+                        ISholding = true;
+                        holding = GetComponent<IIntractable>();
+                    }
+                   
+                }
+            }
+            if(Input.GetButtonUp("Fire1") && ISholding == true)
+             {
+               
+                RaycastHit Hit;
+                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, layerMask))
+                {
+
+                    if (Hit.transform.tag == "Intractable")
+                    {
+                        Hit.transform.GetComponent<IIntractable>().Drop();
+                     }
+                  
+                }
+                if (playerHands.childCount > 0)
+                {
+                    Transform hands = playerHands.transform.GetChild(0);
+                    hands.GetComponent<IIntractable>().Drop();
+                }
+                ISholding = false;
+            }
             if (Input.GetKey(KeyCode.Z))
             {
                 Iszoom = false;
@@ -47,16 +96,15 @@ public class PlayerLook : MonoBehaviour
             {
                 StartCoroutine(Zoomout());
             }
-            CameraRotation();
+          if(lockCamra == false)CameraRotation();
         }
            
     }
   private void use()
     {
-        waitAsecond = true;
-        StartCoroutine(wait());
+        
         RaycastHit Hit;
-        if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, intractableLayer))
+        if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range))
         {
                if (Hit.transform.tag == "Object" || Hit.transform.tag == "Intractable") Hit.transform.GetComponent<IIntractable>().Use();
 
@@ -67,10 +115,9 @@ public class PlayerLook : MonoBehaviour
 
        private void Act()
     {
-       waitAsecond = true;
-        StartCoroutine(wait());
-        RaycastHit Hit;
-        if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, intractableLayer))
+ 
+         RaycastHit Hit;
+        if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range))
         {
                  if (ISholding == false)
                 {
@@ -151,11 +198,5 @@ public class PlayerLook : MonoBehaviour
         }
  
     }
-    IEnumerator wait()
-    {
-        yield return new WaitForSeconds(0.5f);
-        waitAsecond = false;
-
-    }
-
+   
 }
