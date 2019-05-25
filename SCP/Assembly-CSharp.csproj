@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DoorOpen.cs" />
     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Camera.cs" />
     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Cat.cs" />
     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_GammaLinear.cs" />
@@ -85,6 +84,7 @@
     <Compile Include="Assets\scrpits\TapeButtons.cs" />
     <Compile Include="Assets\scrpits\TapeLoadeer.cs" />
     <Compile Include="Assets\scrpits\tapeM.cs" />
+    <Compile Include="Assets\sound efeacts\DoorOpen.cs" />
     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors.shader" />
     <None Include="Assets\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Decal.shader" />
     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders 2.0\Include\TCP2_Outline_SM2.shader" />

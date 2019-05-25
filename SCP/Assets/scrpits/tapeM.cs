@@ -50,6 +50,7 @@ public class tapeM : MonoBehaviour
                 {
                     tape.transform.position = spot.transform.position;
                     tape.GetComponent<Rigidbody>().useGravity = true;
+                    tape.GetComponent<Rigidbody>().isKinematic = false;
                     tape.GetComponent<Collider>().enabled = true;
                     tape.transform.parent = null;
                     tape.name = tape.GetComponent<Tape>().TapeName;
@@ -84,8 +85,9 @@ public class tapeM : MonoBehaviour
     public void TapeLoad(GameObject TapeInfo)
     {
         TapeSource.PlayOneShot(TapeCickSound, 1f);
-        LidOpen = false;        
-        tape  = Instantiate(TapeInfo.GetComponent<Tape>().theTape,tapePos.position,tapePos.rotation);
+        LidOpen = false;
+        TapeInfo.transform.position = tapePos.position;         
+        tape  = Instantiate(TapeInfo, tapePos.position,tapePos.rotation);
         Tapesound = TapeInfo.GetComponent<Tape>().TapeSound;
         tape.GetComponent<Collider>().enabled = false;
         tape.GetComponent<Rigidbody>().useGravity = false;
