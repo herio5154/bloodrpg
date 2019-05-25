@@ -15,6 +15,7 @@ public class PlayerLook : MonoBehaviour
     public bool ISholding;
     private IIntractable holding;
     public LayerMask layerMask;
+    public  float throwForace;
     [Space]
     [Header("zoom")]
     public float camZoom = 60;
@@ -22,6 +23,7 @@ public class PlayerLook : MonoBehaviour
     public float changeAmount;
     private bool Iszoom;
      public static bool lockCamra;
+    public GameObject redacil;
       // Start is called before the first frame update
     void Start()
     {
@@ -85,20 +87,19 @@ public class PlayerLook : MonoBehaviour
                     hands.GetComponent<IIntractable>().Drop();
                 }
                 ISholding = false;
-            }
-            if (Input.GetKey(KeyCode.Z))
-            {
-                Iszoom = false;
-                if (camZoom > minZooom) camZoom -= changeAmount;
-                PlayerCam.fieldOfView = camZoom;
-            }
-            if (Input.GetKeyUp(KeyCode.Z))
-            {
-                StartCoroutine(Zoomout());
-            }
+            }           
           if(lockCamra == false)CameraRotation();
         }
-           
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Iszoom = false;
+            if (camZoom > minZooom) camZoom -= changeAmount;
+            PlayerCam.fieldOfView = camZoom;
+        }
+        if (Input.GetKeyUp(KeyCode.Z))
+        {
+            StartCoroutine(Zoomout());
+        }
     }
   private void use()
     {
