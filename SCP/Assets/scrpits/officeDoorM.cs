@@ -23,17 +23,21 @@ public class officeDoorM : MonoBehaviour,IIntractable
     }
   public  void PickUp(Transform destnation)
     {
-         if(wait  == false)
+         if(wait  == false && GameM.LockDown == false)
         {
-            ButtonSource.PlayOneShot(DoorClickSound, 1f);
-            DoorSource.PlayOneShot(DoorSound, 1f);
-            wait = true;
-            DoorON = !DoorON;
-            iTween.MoveTo(Door, iTween.Hash("position", doorPos[DoorON ? 0 : 1], "time", 3f, "easetype", iTween.EaseType.easeInOutExpo));
+            openDOor(DoorON = !DoorON);
             StartCoroutine(waitAseond());
         }
  
  
+    }
+    public void openDOor(bool Dooropen)
+    {
+        ButtonSource.PlayOneShot(DoorClickSound, 1f);
+        DoorSource.PlayOneShot(DoorSound, 1f);
+        wait = true;
+        DoorON = Dooropen;
+        iTween.MoveTo(Door, iTween.Hash("position", doorPos[DoorON ? 0 : 1], "time", 3f, "easetype", iTween.EaseType.easeInOutExpo));
     }
     public void Drop()
     {

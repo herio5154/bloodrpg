@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HoldingItems : MonoBehaviour,IIntractable
 {
-    bool isHolding;
+   public bool isHolding;
     private Rigidbody rigidBody;
     private Transform hands;
      private static PlayerLook player;
@@ -20,7 +20,7 @@ public class HoldingItems : MonoBehaviour,IIntractable
         look = FindObjectOfType<PlayerLook>();
 
     }
-    void Update()
+    public virtual void Update()
     {
        if(isHolding == true && GameM.playerMoving == true && Input.GetButtonDown("Fire2"))
         {

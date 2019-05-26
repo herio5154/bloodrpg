@@ -10,7 +10,10 @@ public class TapeLoadeer : MonoBehaviour
  
     public void OnTriggerEnter(Collider other)
     {
+        if(other.GetComponent<Tape>() != null)
+        {
         TapeM.TapeLoad(other.gameObject);
+        }
     }
      
 }
