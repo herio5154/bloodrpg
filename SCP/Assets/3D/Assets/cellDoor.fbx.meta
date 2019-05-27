@@ -16,6 +16,8 @@ ModelImporter:
     3300002: door
     4300000: door
     4300002: cora_door_wal2
+    6400000: cora_door_wal2
+    6400002: door
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -49,14 +51,14 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

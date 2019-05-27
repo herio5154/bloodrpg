@@ -1,27 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CamraM : MonoBehaviour
+public class camraM : MonoBehaviour
 {
-    public GameObject PlayerCam;
-    public GameObject CellCam;
-    public GameObject Hallcam;
-     private void OnEnable()
+    public CamInfoCard [] camInfo;
+    public Text camText;
+    private int camID;
+    public GameObject menu;
+    [System.Serializable]
+    public class CamInfoCard
     {
-        CellCam.SetActive(false);
-        Hallcam.SetActive(false);
-        GameM.playerMoving = false;
-        PlayerCam.SetActive(false);
+        public string camName;
+        public GameObject Camra;
+        public Light CamLight;
     }
+    public void OnEnable()
+    {
+        changeCamra(0);
+    }
+    public void changeCamra(int NewcamID)
+    {
 
-    public void HallcamCheck()
-    {
-        Debug.Log("i am on");
+        camText.text = camInfo[NewcamID].camName;
+        camInfo[camID].Camra.SetActive(false);
+        camInfo[NewcamID].Camra.SetActive(true);
+        camID = NewcamID;
     }
-    public void CellcamCheck()
+    public void back()
     {
-        Debug.Log("i am on");
-       
+        menu.SetActive(true);
+        gameObject.SetActive(false);
+
     }
 }

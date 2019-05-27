@@ -11,16 +11,7 @@ public class officeDoorM : MonoBehaviour,IIntractable
     public AudioSource ButtonSource,DoorSource;
     public AudioClip DoorClickSound,DoorSound;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
   public  void PickUp(Transform destnation)
     {
          if(wait  == false && GameM.LockDown == false)

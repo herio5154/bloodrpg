@@ -60,20 +60,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CamraM.cs" />
-    <Compile Include="Assets\emergencyButton.cs" />
-    <Compile Include="Assets\floatingObjet.cs" />
-    <Compile Include="Assets\Pixelation\Example\Scripts\ImageEffectBase.cs" />
-    <Compile Include="Assets\Pixelation\Example\Scripts\Plane.cs" />
-    <Compile Include="Assets\Pixelation\Example\Scripts\PointLight.cs" />
-    <Compile Include="Assets\Pixelation\Scripts\Chunky.cs" />
-    <Compile Include="Assets\Pixelation\Scripts\Pixelation.cs" />
+    <Compile Include="Assets\camraM.cs" />
+    <Compile Include="Assets\camraMovement.cs" />
+    <Compile Include="Assets\cellDoorControl.cs" />
     <Compile Include="Assets\playerScripits\ArciveBox.cs" />
     <Compile Include="Assets\playerScripits\DragObjet.cs" />
     <Compile Include="Assets\playerScripits\HoldingItems.cs" />
     <Compile Include="Assets\playerScripits\Interface.cs" />
     <Compile Include="Assets\playerScripits\PlayerLook.cs" />
     <Compile Include="Assets\playerScripits\PlayerMove.cs" />
+    <Compile Include="Assets\scrpits\CamraPC.cs" />
+    <Compile Include="Assets\scrpits\emergencyButton.cs" />
+    <Compile Include="Assets\scrpits\floatingObjet.cs" />
     <Compile Include="Assets\scrpits\GameM.cs" />
     <Compile Include="Assets\scrpits\officeDoorM.cs" />
     <Compile Include="Assets\scrpits\Tape.cs" />
@@ -81,15 +79,13 @@
     <Compile Include="Assets\scrpits\TapeLoadeer.cs" />
     <Compile Include="Assets\scrpits\tapeM.cs" />
     <Compile Include="Assets\sound efeacts\DoorOpen.cs" />
-    <None Include="Assets\Pixelation\Readme.txt" />
+    <Compile Include="Assets\ThePC.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\Pixelation\Shaders\Chunky.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\Pixelation\Shaders\Pixelation.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
