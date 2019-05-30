@@ -1,0 +1,20 @@
+newmtl ProBuilderDefault
+map_Kd GridBox_Default.png
+Kd 1 1 1
+d 1
+
+newmtl TexturesCom_Carpet0047_1_seamless_S
+map_Kd TexturesCom_Carpet0047_1_seamless_S.jpg
+Kd 1 1 1
+d 1
+
+newmtl creem_walls
+map_Kd TexturesCom_PlasterWhite0154_1_seamless_S.jpg
+Kd 1 1 1
+d 1
+
+newmtl concreat
+map_Kd cocreat.png
+Kd 1 1 1
+d 1
+

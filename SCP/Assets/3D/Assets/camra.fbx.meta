@@ -1,46 +1,122 @@
 fileFormatVersion: 2
 guid: a7dda4fc2c8d71f4da65aec9b4785c00
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: back_part
-    100002: //RootNode
-    100004: camra_body
-    100006: camra_eye
-    100008: flashlight
-    100010: group1
-    100012: tape
-    100014: cam_body
-    100016: stick1
-    400000: back_part
-    400002: //RootNode
-    400004: camra_body
-    400006: camra_eye
-    400008: flashlight
-    400010: group1
-    400012: tape
-    400014: cam_body
-    400016: stick1
-    2100000: lambert1
-    2100002: camra
-    2300000: back_part
-    2300002: camra_body
-    2300004: camra_eye
-    2300006: flashlight
-    2300008: tape
-    2300010: stick1
-    3300000: back_part
-    3300002: camra_body
-    3300004: camra_eye
-    3300006: flashlight
-    3300008: tape
-    3300010: stick1
-    4300000: back_part
-    4300002: camra_body
-    4300004: camra_eye
-    4300006: flashlight
-    4300008: tape
-    4300010: stick1
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: back_part
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: camra_body
+  - first:
+      1: 100006
+    second: camra_eye
+  - first:
+      1: 100008
+    second: flashlight
+  - first:
+      1: 100010
+    second: group1
+  - first:
+      1: 100012
+    second: tape
+  - first:
+      1: 100014
+    second: cam_body
+  - first:
+      1: 100016
+    second: stick1
+  - first:
+      4: 400000
+    second: back_part
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: camra_body
+  - first:
+      4: 400006
+    second: camra_eye
+  - first:
+      4: 400008
+    second: flashlight
+  - first:
+      4: 400010
+    second: group1
+  - first:
+      4: 400012
+    second: tape
+  - first:
+      4: 400014
+    second: cam_body
+  - first:
+      4: 400016
+    second: stick1
+  - first:
+      21: 2100000
+    second: lambert1
+  - first:
+      21: 2100002
+    second: camra
+  - first:
+      23: 2300000
+    second: back_part
+  - first:
+      23: 2300002
+    second: camra_body
+  - first:
+      23: 2300004
+    second: camra_eye
+  - first:
+      23: 2300006
+    second: flashlight
+  - first:
+      23: 2300008
+    second: tape
+  - first:
+      23: 2300010
+    second: stick1
+  - first:
+      33: 3300000
+    second: back_part
+  - first:
+      33: 3300002
+    second: camra_body
+  - first:
+      33: 3300004
+    second: camra_eye
+  - first:
+      33: 3300006
+    second: flashlight
+  - first:
+      33: 3300008
+    second: tape
+  - first:
+      33: 3300010
+    second: stick1
+  - first:
+      43: 4300000
+    second: back_part
+  - first:
+      43: 4300002
+    second: camra_body
+  - first:
+      43: 4300004
+    second: camra_eye
+  - first:
+      43: 4300006
+    second: flashlight
+  - first:
+      43: 4300008
+    second: tape
+  - first:
+      43: 4300010
+    second: stick1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -81,20 +157,21 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -103,10 +180,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -116,6 +194,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

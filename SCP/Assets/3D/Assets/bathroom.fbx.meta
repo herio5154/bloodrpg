@@ -15,6 +15,17 @@ ModelImporter:
     100018: transform3
     100020: transform4
     100022: transform5
+    100024: bathroom_door1
+    100026: bathroom_side_wall1
+    100028: pCube2
+    100030: transform6
+    100032: transform7
+    100034: transform8
+    100036: transform9
+    100038: pCube1
+    100040: polySurface1
+    100042: polySurface2
+    100044: transform10
     400000: //RootNode
     400002: bathroom_door
     400004: bathroom_door 1
@@ -27,20 +38,54 @@ ModelImporter:
     400018: transform3
     400020: transform4
     400022: transform5
+    400024: bathroom_door1
+    400026: bathroom_side_wall1
+    400028: pCube2
+    400030: transform6
+    400032: transform7
+    400034: transform8
+    400036: transform9
+    400038: pCube1
+    400040: polySurface1
+    400042: polySurface2
+    400044: transform10
     2100000: offace_wall
     2100002: lambert1
+    2100004: baathroom
+    2100006: backwall
+    2100008: tiled_wall
     2300000: bathroom_door
     2300002: bathroom_side_wall
     2300004: bathroom_wall
     2300006: bathroomdoor
+    2300008: bathroom_door1
+    2300010: bathroom_side_wall1
+    2300012: pCube1
+    2300014: polySurface1
+    2300016: polySurface2
     3300000: bathroom_door
     3300002: bathroom_side_wall
     3300004: bathroom_wall
     3300006: bathroomdoor
+    3300008: bathroom_door1
+    3300010: bathroom_side_wall1
+    3300012: pCube1
+    3300014: polySurface1
+    3300016: polySurface2
     4300000: bathroom_wall
     4300002: bathroomdoor
     4300004: bathroom_side_wall
     4300006: bathroom_door
+    4300008: bathroom_side_wall1
+    4300010: bathroom_door1
+    4300012: pCube1
+    4300014: polySurface1
+    4300016: polySurface2
+    6400000: bathroom_door1
+    6400002: bathroomdoor
+    6400004: pCube1
+    6400006: polySurface1
+    6400008: polySurface2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -74,14 +119,14 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
