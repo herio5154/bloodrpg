@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class CamraPC : MonoBehaviour
 {
-    public GameObject PlayerCam;
-    public GameObject playerthing;
+
     public GameObject CellCam;
     public GameObject Hallcam;
+    public InteractWithMenu PC;
     [Space]
     public CellDoorCard [] cellDoors;
     [Header("cell doors")]
- 
+    public Color []TextClolor;
     private bool wait;
     [System.Serializable]
     public class CellDoorCard
@@ -23,16 +23,21 @@ public class CamraPC : MonoBehaviour
     
      private void OnEnable()
     {
-        playerthing.SetActive(false);
-        CellCam.SetActive(false);
+         CellCam.SetActive(false);
         Hallcam.SetActive(false);
         GameM.playerMoving = false;
-        PlayerCam.SetActive(false);
+         foreach (var C in cellDoors)
+        {
+           
+            C.Butotntext.color = TextClolor[CheckClour(C.Butotntext.text)];
+            C.Butotntext.text = C.cellDoor.DoorText;
+        }
     }
     public void FixedUpdate()
     {
         foreach (var C in cellDoors)
         {
+            C.Butotntext.color = TextClolor[CheckClour(C.Butotntext.text)];
             C.Butotntext.text = C.cellDoor.DoorText;
         }
     }
@@ -55,16 +60,20 @@ public class CamraPC : MonoBehaviour
     }
     public void exitMenu()
     {
-        GameM.playerMoving = true;
-        PlayerCam.SetActive(true);
-        gameObject.SetActive(false);
-        playerthing.SetActive(true);
-
+        PC.Drop(); 
+  
+    }
+    public int CheckClour(string State)
+    {
+        if (State.Contains("open")) return 0;
+        if (State.Contains("Closed")) return 1;
+        return 2;
     }
     public string ButtonText(bool ISOpen)
     {
         string bace = "cell Door ";
-        if (ISOpen == true) return bace + "open";
+        if (ISOpen == true)
+           return bace + "open";
         else return bace + "Closed";
      
     }

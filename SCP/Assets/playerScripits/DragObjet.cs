@@ -7,7 +7,7 @@ public class DragObjet : MonoBehaviour,IIntractable
     private bool holding;
     private Vector3 offset;
     private Transform player;
-
+    public Rigidbody objrigidbody;
     // Update is called once per frame
     public void Update()
     {
@@ -26,14 +26,14 @@ public class DragObjet : MonoBehaviour,IIntractable
         holding = true;
         player = PlayerHands;
         this.transform.position = PlayerHands.position;
-        GetComponent<Rigidbody>().useGravity = false;
+        objrigidbody.useGravity = false;
         PlayerLook.lockCamra = true;
 
     }
     public virtual void Drop()
     {
         holding = false;
-        GetComponent<Rigidbody>().useGravity = true;
+        objrigidbody.useGravity = true;
         PlayerLook.lockCamra = false;
         
     }

@@ -34,72 +34,75 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-
-        if(GameM.playerMoving == true)
+    if(PauseMenuM.IsPaused == false)
         {
-            if (Input.GetButtonUp("Fire2") && ISholding == false)
+            if (GameM.playerMoving == true)
             {
-                RaycastHit Hit;
-                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range,layerMask))
+                if (Input.GetButtonUp("Fire2") && ISholding == false)
+                {
+                    RaycastHit Hit;
+                    if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, layerMask))
+                    {
+
+                        if (Hit.transform.tag == "Intractable")
+                        {
+                            Hit.transform.GetComponent<IIntractable>().Use();
+                        }
+
+                    }
+                }
+
+                if (Input.GetButtonDown("Fire1") && ISholding == false)
                 {
 
-                    if (Hit.transform.tag == "Intractable")
+
+                    RaycastHit Hit;
+                    if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, layerMask))
                     {
-                        Hit.transform.GetComponent<IIntractable>().Use();
+
+                        if (Hit.transform.tag == "Intractable")
+                        {
+                            Hit.transform.GetComponent<IIntractable>().PickUp(playerHands);
+                            ISholding = true;
+                            holding = GetComponent<IIntractable>();
+                        }
+
                     }
-
                 }
-            }
+                if (Input.GetButtonUp("Fire1") && ISholding == true)
+                {
 
-                if (Input.GetButtonDown("Fire1")&&ISholding ==false)
+                    RaycastHit Hit;
+                    if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, layerMask))
+                    {
+
+                        if (Hit.transform.tag == "Intractable")
+                        {
+                            Hit.transform.GetComponent<IIntractable>().Drop();
+                        }
+
+                    }
+                    if (playerHands.childCount > 0)
+                    {
+                        Transform hands = playerHands.transform.GetChild(0);
+                        hands.GetComponent<IIntractable>().Drop();
+                    }
+                    ISholding = false;
+                }
+                if (lockCamra == false) CameraRotation();
+            }
+            if (Input.GetButton("Zoom"))
             {
-             
-           
-                RaycastHit Hit;
-                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range,layerMask))
-                {
-
-                    if (Hit.transform.tag == "Intractable")
-                    {
-                         Hit.transform.GetComponent<IIntractable>().PickUp(playerHands);
-                        ISholding = true;
-                        holding = GetComponent<IIntractable>();
-                    }
-                   
-                }
+                Iszoom = false;
+                if (camZoom > minZooom) camZoom -= changeAmount;
+                PlayerCam.fieldOfView = camZoom;
             }
-            if(Input.GetButtonUp("Fire1") && ISholding == true)
-             {
-               
-                RaycastHit Hit;
-                if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out Hit, range, layerMask))
-                {
-
-                    if (Hit.transform.tag == "Intractable")
-                    {
-                        Hit.transform.GetComponent<IIntractable>().Drop();
-                     }
-                  
-                }
-                if (playerHands.childCount > 0)
-                {
-                    Transform hands = playerHands.transform.GetChild(0);
-                    hands.GetComponent<IIntractable>().Drop();
-                }
-                ISholding = false;
-            }           
-          if(lockCamra == false)CameraRotation();
+            if (Input.GetButtonUp("Zoom"))
+            {
+                StartCoroutine(Zoomout());
+            }
         }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            Iszoom = false;
-            if (camZoom > minZooom) camZoom -= changeAmount;
-            PlayerCam.fieldOfView = camZoom;
-        }
-        if (Input.GetKeyUp(KeyCode.Z))
-        {
-            StartCoroutine(Zoomout());
-        }
+         
     }
   private void use()
     {

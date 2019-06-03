@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -24,11 +22,15 @@ public class HoldingItems : MonoBehaviour,IIntractable
     {
        if(isHolding == true && GameM.playerMoving == true && Input.GetButtonDown("Fire2"))
         {
+            Time.timeScale = 0;
+            PauseMenuM.IsPaused = true;
             GameM.playerMoving = false;
             look.redacil.SetActive(false);
         }
         if (isHolding == true && GameM.playerMoving == false && Input.GetButtonUp("Fire2"))
         {
+            Time.timeScale = 1;
+            PauseMenuM.IsPaused = false;
             GameM.playerMoving = true;
             look.redacil.SetActive(true);
 

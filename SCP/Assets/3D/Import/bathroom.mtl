@@ -1,0 +1,5 @@
+newmtl tiled_wall
+map_Kd creamTiles.jpg
+Kd 1 1 1
+d 1
+
