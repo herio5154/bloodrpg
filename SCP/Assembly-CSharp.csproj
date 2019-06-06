@@ -62,8 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\InteractWithMenu.cs" />
-    <Compile Include="Assets\I'nteractWithMenu.cs" />
+    <Compile Include="Assets\colectableM.cs" />
+    <Compile Include="Assets\collectibleCard.cs" />
+    <Compile Include="Assets\folderControl.cs" />
+    <Compile Include="Assets\folderOpen.cs" />
+    <Compile Include="Assets\menuM.cs" />
+    <Compile Include="Assets\objectMove.cs" />
+    <Compile Include="Assets\PapersContorl.cs" />
     <Compile Include="Assets\playerScripits\ArciveBox.cs" />
     <Compile Include="Assets\playerScripits\DragObjet.cs" />
     <Compile Include="Assets\playerScripits\HoldingItems.cs" />
@@ -78,6 +83,7 @@
     <Compile Include="Assets\scrpits\emergencyButton.cs" />
     <Compile Include="Assets\scrpits\floatingObjet.cs" />
     <Compile Include="Assets\scrpits\GameM.cs" />
+    <Compile Include="Assets\scrpits\InteractWithMenu.cs" />
     <Compile Include="Assets\scrpits\officeDoorM.cs" />
     <Compile Include="Assets\scrpits\PauseMenuM.cs" />
     <Compile Include="Assets\scrpits\Tape.cs" />
@@ -85,6 +91,7 @@
     <Compile Include="Assets\scrpits\TapeLoadeer.cs" />
     <Compile Include="Assets\scrpits\tapeM.cs" />
     <Compile Include="Assets\sound efeacts\DoorOpen.cs" />
+    <Compile Include="Assets\tapeMenu.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

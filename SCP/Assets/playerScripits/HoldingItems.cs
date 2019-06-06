@@ -5,8 +5,8 @@
 public class HoldingItems : MonoBehaviour,IIntractable
 {
    public bool isHolding;
-    private Rigidbody rigidBody;
-    private Transform hands;
+    public Rigidbody rigidBody;
+    public Transform hands;
      private static PlayerLook player;
     private PlayerLook look;
     [Space]
@@ -54,7 +54,7 @@ public class HoldingItems : MonoBehaviour,IIntractable
     {
      
     }
-    public void PickUp(Transform PlayerHands)
+    public virtual void PickUp(Transform PlayerHands)
     {
          hands = PlayerHands;
          rigidBody.useGravity = false;
@@ -64,7 +64,7 @@ public class HoldingItems : MonoBehaviour,IIntractable
         this.transform.parent = PlayerHands;
         isHolding = true;
     }
-    public void Drop()
+    public virtual void Drop()
     {
         rigidBody.isKinematic = false;
         rigidBody.useGravity = true;

@@ -6,5 +6,6 @@ public class Tape : HoldingItems
 {
     public string TapeName;
     public AudioClip TapeSound;
-     public bool TapeLoop;
+    public collectibleCard TapeColectable;
+
 }

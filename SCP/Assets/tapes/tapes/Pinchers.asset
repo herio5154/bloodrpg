@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0973e4cd7c39ee64b86b89e1695e50db, type: 3}
+  m_Name: Pinchers
+  m_EditorClassIdentifier: 
+  FileName: Pinchers
+  ID: 4
+  HasFile: 1
+  TapeSound: {fileID: 8300000, guid: 7c059e506c85d9f4dbcd92dd0630efaf, type: 3}
+  filesCards:
+  - Headeer: Dr. Hamm
+    Text:
+    - '181188 was put in general pop after the incident  they let her keep the object
+      she  got from the travelling salesman as it''s not an SCP there was a riot  shortly
+      after her arrival '
+    - '181188 thinks she has powers kind of true    but no the riot was caused by
+      a super rare Beanie Babie   worth millions the Beanie Babie is now  missing
+      I think it was a lobster  '

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0973e4cd7c39ee64b86b89e1695e50db, type: 3}
+  m_Name: the new jersey incident
+  m_EditorClassIdentifier: 
+  FileName: 'the new jersey incident '
+  ID: 6
+  HasFile: 0
+  TapeSound: {fileID: 8300000, guid: cb08e7fe5dc119146ae312370c05ff87, type: 3}
+  filesCards: []

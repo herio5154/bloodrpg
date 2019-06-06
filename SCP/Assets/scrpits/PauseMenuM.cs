@@ -18,6 +18,7 @@ public class PauseMenuM : MonoBehaviour
     
     public void openMenu(int menuID)
     {
+        Cursor.visible = true;
         for (int i = 0; i < PauseMenus.Length; i++)
         {
             PauseMenus[i].SetActive(i == menuID);
