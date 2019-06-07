@@ -7,7 +7,17 @@ public class PauseMenuM : MonoBehaviour
     public static bool IsPaused = false;
     public GameM gameM;
     public GameObject [] PauseMenus;
-     
+    public GameObject[] NoteMenu;
+ 
+    public virtual void changeNotesMenu(int ID)
+    {
+        for (int i = 0; i < NoteMenu.Length; i++)
+        {
+            NoteMenu[i].SetActive(i == ID);
+        }
+     }
+
+
     private void Update()
     {
         if (Input.GetButtonDown("Cancel") && IsPaused == false) Paused();
@@ -50,4 +60,5 @@ public class PauseMenuM : MonoBehaviour
         openMenu(10);
 
     }
+
 }

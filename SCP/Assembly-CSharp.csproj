@@ -62,13 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\colectableM.cs" />
-    <Compile Include="Assets\collectibleCard.cs" />
-    <Compile Include="Assets\folderControl.cs" />
-    <Compile Include="Assets\folderOpen.cs" />
-    <Compile Include="Assets\menuM.cs" />
-    <Compile Include="Assets\objectMove.cs" />
-    <Compile Include="Assets\PapersContorl.cs" />
     <Compile Include="Assets\playerScripits\ArciveBox.cs" />
     <Compile Include="Assets\playerScripits\DragObjet.cs" />
     <Compile Include="Assets\playerScripits\HoldingItems.cs" />
@@ -80,11 +73,19 @@
     <Compile Include="Assets\scrpits\CamraPC.cs" />
     <Compile Include="Assets\scrpits\catAI.cs" />
     <Compile Include="Assets\scrpits\cellDoorControl.cs" />
+    <Compile Include="Assets\scrpits\colectableM.cs" />
+    <Compile Include="Assets\scrpits\collectibleCard.cs" />
     <Compile Include="Assets\scrpits\emergencyButton.cs" />
     <Compile Include="Assets\scrpits\floatingObjet.cs" />
+    <Compile Include="Assets\scrpits\folderControl.cs" />
+    <Compile Include="Assets\scrpits\folderOpen.cs" />
     <Compile Include="Assets\scrpits\GameM.cs" />
     <Compile Include="Assets\scrpits\InteractWithMenu.cs" />
+    <Compile Include="Assets\scrpits\menuM.cs" />
+    <Compile Include="Assets\scrpits\notesMenu.cs" />
+    <Compile Include="Assets\scrpits\objectMove.cs" />
     <Compile Include="Assets\scrpits\officeDoorM.cs" />
+    <Compile Include="Assets\scrpits\PapersContorl.cs" />
     <Compile Include="Assets\scrpits\PauseMenuM.cs" />
     <Compile Include="Assets\scrpits\Tape.cs" />
     <Compile Include="Assets\scrpits\TapeButtons.cs" />

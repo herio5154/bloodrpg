@@ -28,7 +28,7 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         PlayerCam = gameObject.GetComponent<Camera>();
-        Cursor.visible = false;
+   //     Cursor.visible = false;
     }
 
     // Update is called once per frame

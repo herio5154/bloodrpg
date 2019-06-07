@@ -13,7 +13,7 @@ public class GameM : MonoBehaviour
     public class SaveStats
     {
         public bool[]DoorsOpen;
-        public List<collectibleCard> Tapes = new List<collectibleCard>();
+        public List<collectibleCard> collectibles = new List<collectibleCard>();
     }
     [System.Serializable]
    public class PlayerStuff
