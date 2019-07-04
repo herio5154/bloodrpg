@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemySight.cs" />
+    <Compile Include="Assets\LiftM.cs" />
     <Compile Include="Assets\playerScripits\ArciveBox.cs" />
     <Compile Include="Assets\playerScripits\DragObjet.cs" />
     <Compile Include="Assets\playerScripits\HoldingItems.cs" />

@@ -8,7 +8,13 @@ public class PauseMenuM : MonoBehaviour
     public GameM gameM;
     public GameObject [] PauseMenus;
     public GameObject[] NoteMenu;
+    public AudioSource playerAudio;
+    public bool SoundPasue;
+    public void Start()
+    {
  
+
+    }
     public virtual void changeNotesMenu(int ID)
     {
         for (int i = 0; i < NoteMenu.Length; i++)
@@ -28,8 +34,7 @@ public class PauseMenuM : MonoBehaviour
     
     public void openMenu(int menuID)
     {
-        Cursor.visible = true;
-        for (int i = 0; i < PauseMenus.Length; i++)
+         for (int i = 0; i < PauseMenus.Length; i++)
         {
             PauseMenus[i].SetActive(i == menuID);
 
@@ -47,6 +52,14 @@ public class PauseMenuM : MonoBehaviour
 
     public void Paused()
     {
+        if (playerAudio.isPlaying == true)
+        {
+            playerAudio.Pause();
+            SoundPasue = true;
+        }
+
+ 
+        Cursor.visible = true;
         openMenu(0);
         IsPaused = true;
         Time.timeScale = 0;
@@ -54,6 +67,11 @@ public class PauseMenuM : MonoBehaviour
      }
     public void contuneGame()
     {
+        if(SoundPasue == true)
+        {
+            playerAudio.Play();
+            SoundPasue = false;
+        }
         IsPaused = false;
         Time.timeScale = 1;
         gameM.playerStuff.playerReticle.SetActive(true);

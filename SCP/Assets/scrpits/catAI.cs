@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class catAI : MonoBehaviour
+public class catAI : EnemySight
 {
-    public GameObject target;
-    void Start()
+   void Start()
     {
         
     }
@@ -13,6 +12,9 @@ public class catAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target.transform.position);
-    }
+        if(PlayerInSight == true)
+        {
+            transform.LookAt(Player.transform.position);
+        }
+     }
 }

@@ -118,7 +118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8753469de7d6b3a4ca8b5406a66fcdd7, type: 3}
+  - {fileID: 2100000, guid: 492abd66f8fd10c4eba2cea71760a55b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   DoorSource: {fileID: 4749550858566674757}
   DoorSound: {fileID: 8300000, guid: a8f7e204dccecef49928cd3c812f6a58, type: 3}
   DoorText: cell Door Closed
-  DoorID: 0
+  DoorID: 1
 --- !u!82 &4749550858566674757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8753469de7d6b3a4ca8b5406a66fcdd7, type: 3}
+  - {fileID: 2100000, guid: 492abd66f8fd10c4eba2cea71760a55b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

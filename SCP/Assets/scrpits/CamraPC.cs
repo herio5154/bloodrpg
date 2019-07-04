@@ -45,7 +45,7 @@ public class CamraPC : MonoBehaviour
     {
         if(cellDoors[ID].cellDoor.Loading == false)
         {
-            cellDoors[ID].cellDoor.openDoor();
+            ////cellDoors[ID].cellDoor.openDoor();
         }
     }
     public void HallcamCheck()

@@ -10,9 +10,14 @@ public class DoorOpen : MonoBehaviour,IIntractable
     public float OpenTime = 1f;
     public iTween.EaseType opentipe = iTween.EaseType.easeInExpo;
     public bool autoClose;
-     public void PickUp(Transform destnation)
+    public void Start()
     {
-         openCloseDoor();
+     }
+    public void PickUp(Transform destnation)
+    {
+        Debug.Log("nope");
+
+               openCloseDoor();
     }
     public void Drop()
     {
@@ -20,6 +25,7 @@ public class DoorOpen : MonoBehaviour,IIntractable
     }
     public void Use()
     {
+        Debug.Log("nope");
         openCloseDoor();
     }
     public void openCloseDoor()

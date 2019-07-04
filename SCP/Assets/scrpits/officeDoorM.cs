@@ -17,7 +17,7 @@ public class officeDoorM : MonoBehaviour,IIntractable
     {
         buttons[0].transform.position = buttonPos[DoorON ? 1 : 0].position;
         buttons[1].transform.position = buttonPos[DoorON ? 3 : 2].position;
-
+        Door.transform.position = doorPos[DoorON ? 0 : 1].position;
     }
 
     public  void PickUp(Transform destnation)

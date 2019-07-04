@@ -13,6 +13,7 @@ public class GameM : MonoBehaviour
     public class SaveStats
     {
         public bool[]DoorsOpen;
+        public bool feedCat;
         public List<collectibleCard> collectibles = new List<collectibleCard>();
     }
     [System.Serializable]
@@ -23,7 +24,8 @@ public class GameM : MonoBehaviour
         public GameObject PlayerCam;
  
     }
-  public void turnOfAndOnPlayer(bool isOn)
+ 
+    public void turnOfAndOnPlayer(bool isOn)
     {
        playerMoving = isOn;
         playerStuff.playerReticle.SetActive(isOn);
